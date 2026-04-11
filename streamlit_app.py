@@ -5,7 +5,7 @@
 """
 VATA_Lotto — Streamlit GUI (bez tkinter) 
 
-cd /Users/4c/Desktop/GHQ/kurzor/VATA_Lotto-main
+cd /VATA_Lotto_streamlit-main
 streamlit run streamlit_app.py
 """
 
@@ -28,7 +28,7 @@ from vata_engine import (
     run_engine,
 )
 
-DEFAULT_CSV = Path("/Users/4c/Desktop/GHQ/kurzor/data/loto7hh_4596_k29.csv")
+DEFAULT_CSV = Path("/data/loto7hh_4596_k29.csv")
 
 st.set_page_config(
     page_title="VATA_Lotto",
@@ -467,7 +467,7 @@ def extra_tab(name: str, script: str):
     st.subheader(name)
     st.caption("Tk verzija na ovoj mašini nije dostupna — pokretanje iz terminala.")
     st.code(
-        "cd /Users/4c/Desktop/GHQ/kurzor/VATA_Lotto-main\npython3 " + script,
+        "cd /VATA_Lotto_streamlite-main\npython3 " + script,
         language="bash",
     )
 
@@ -508,33 +508,33 @@ with tab_h:
 You can now view your Streamlit app in your browser.
 
   Local URL: http://localhost:8502
-  Network URL: http://192.168.1.23:8502
+  Network URL: http://192.x.y.23:8502
 
 
 
 7/7
-Det:  06, 09, 19, 25, 26, 34, 36
-Heur: 01, 07, 09, 14, 24, 25, 34   
+Det:  06, 09, x, y, z, 34, 36
+Heur: 01, 07, x, y, z, 25, 34   
 
 
 6/7
-Det:  03, 05, 12, 17, 24, 27, 34
-Heur: 04, 07, 12, 24, 27, 36, 38   
+Det:  03, 05, x, y, z, 27, 34
+Heur: 04, 07, x, y, z, 36, 38   
 
 
 5/7
-Det:  01, 09, 16, 19, 27, 32, 34
-Heur: 08, 09, 11, 12, 31, 37, 39   
+Det:  01, 09, x, y, z, 32, 34
+Heur: 08, 09, x, y, z, 37, 39   
 
 
 4/7
-Det:  04, 05, 10, 27, 30, 38, 39
-Heur: 07, 10, 22, 27, 29, 34, 38  
+Det:  04, 05, x, y, z, 38, 39
+Heur: 07, 10, x, y, z, 34, 38  
 
 
 3/7
-Det:   03, 17, 24, 25, 29, 31, 36
-Heur:  03, 08, 15, 18, 26, 29, 37 
+Det:   03, 17, x, y, z, 31, 36
+Heur:  03, 08, x, y, z, 29, 37 
 
 
 Num|Cnt
@@ -546,7 +546,7 @@ Num|Cnt
 32|  8
 11|  7
 38|  7
-19|  7
+ x|  7
 21|  7
 22|  7
 16|  7
@@ -556,7 +556,7 @@ Num|Cnt
 33|  6
 23|  6
 35|  6
-39|  6
+ y|  6
 17|  6
 24|  6
 37|  6
@@ -572,7 +572,7 @@ Num|Cnt
  6|  6
  3|  5
 12|  5
-30|  5
+ z|  5
  1|  5
  2|  5
  5|  5
