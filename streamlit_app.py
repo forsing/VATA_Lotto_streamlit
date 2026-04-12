@@ -640,4 +640,39 @@ NEXT KOMBINACIJA
 
 STOP nije dodat — u čistom Streamlit-u tokom jednog CPU ciklusa nije pouzdan; 
 obrazloženje u caption-u ispod
+
+
+Cond u run_engine znači: 
+broj poklapanja između predloženog tiketa 
+i reda iz pool-a mora biti ≥ Cond (npr. 5). 
+To je uslov preseka u optimizaciji 
+(u poredjenju sa poljem if).
+
+Polje označeno kao if se opt_if uopšte ne koristi u petlji run_engine (samo se prikazuje u formi). 
+I u vata_engine motor trenutno koristi samo Cond; 
+vrednost pored if (npr. 7) je podrazumevano dužina jednog reda iz istorije 
+(koliko brojeva ima u jednom izvlačenju) i služi da polje liči na GUI. 
+
+Glavni prozor: 
+Draw Size = koliko brojeva mora biti u svakom redu 
+da Validate prihvati red (npr. 7 za moj CSV). 
+To je pravilo parsiranja, ne „Cond“.
+
+Motor ostaje isti (puna petlja). 
+Dodana je funkciju koja bira tiket 
+sa najvećim kumulativnim % (najbliže 100%) 
+i u Streamlit-u prikazujem samo tu jednu liniju 
+ispod punog izlaza.
+
+run_engine i dalje radi celu optimizaciju i ispisuje sve tikete; 
+ispod toga se dodatno prikazuje jedna linija Sledeci — tiket 
+iz koraka sa najvećim kumulativnim % (najbliže 100%). 
+Funkcija je next_ticket_closest_to_100_pct u vata_engine.py, 
+poziv u streamlit_app.py posle oba text_area.
+
+jedna next = korak sa najvećim kumulativnim % (najbliže 100%), 
+uz neizmenjen ceo prolaz motora
+
+rezultat optimizacije ostaje u st.session_state.opt_bundle posle reruna; 
+Clear briše i to; upozorenje za pool ≥800 redova;
 """
