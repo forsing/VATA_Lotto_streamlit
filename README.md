@@ -1,7 +1,7 @@
 Inspiracija/Nadogradnja - Inspiration/Upgrade
 https://github.com/jasminkotraining-eng/VATA_Lotto
 
-
+streamlit run streamlit_app.py
 
 
 
