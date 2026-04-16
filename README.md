@@ -1,4 +1,7 @@
 Inspiracija/Nadogradnja - Inspiration/Upgrade
+https://github.com/jasminkotraining-eng/VATA_Lotto
+
+
 
 
 
